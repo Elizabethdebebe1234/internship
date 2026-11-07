@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #603889;
+  text-decoration: aliceblue;
+  text-align: center;
+}
+
+
+
+.welcome-title {
+  color:rgb(243, 233, 244);
+  font-size: 40px;
+  font-weight: 800;
+  
+}
+
+.equipment-card {
+  color:black;
+  border: 1px solid #ce93f5;
+  border-radius: 12px;
+  width:400px;
+  height: 50px;
+   padding: 20px;
+  margin: 15px auto;
+}
+
+.card-content {
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+
+}
+
+
