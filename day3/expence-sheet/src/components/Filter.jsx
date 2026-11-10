@@ -5,6 +5,7 @@ function Filter({selectedYear, onChangeYear}){
 
 
     return(
+      <div className = "same-box">
        <div className="filter-button">
         <p className="filter-text">Filter</p>
          
@@ -18,6 +19,8 @@ function Filter({selectedYear, onChangeYear}){
             <option value="2022">2022</option>
             <option value="2026">2026</option>
          </select>
+       </div>
+
        </div>
     );
 }

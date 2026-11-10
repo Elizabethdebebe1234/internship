@@ -6,15 +6,13 @@ import expenceData from "./data/expence";
 
 function App() {
   const [selectedYear, setSelectedYear] = useState("All");
-
-  
   const [expence, setExpence] = useState(() => {
-    const savedExpences = localStorage.getItem("expences");
+  const savedExpences = localStorage.getItem("expences");
 
     if (savedExpences) {
       return JSON.parse(savedExpences).map((item) => ({
         ...item,
-        date: new Date(item.date),
+        date: (item.date),
       }));
     }
 
@@ -43,13 +41,12 @@ function App() {
   return (
     <>
       <Header onSubmitExpense={handleSubmit} />
-
-      <Filter
-        selectedYear={selectedYear}
-        onChangeYear={setSelectedYear}
-      />
-
-      <Card expences={filteredExpences}/>
+      
+      
+      <div className="expense-container">
+        <Filter selectedYear={selectedYear} onChangeYear={setSelectedYear} />
+        <Card expences={filteredExpences} />
+      </div>
     </>
   );
 }

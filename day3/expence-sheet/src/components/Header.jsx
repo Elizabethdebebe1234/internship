@@ -43,29 +43,35 @@ function Header ({onSubmitExpense}) {
 
         <div className = "header">
             <div className = "form">
-            <div className= "title">
-                <label> Title </label>
+              
+              <div className= "input-container">
+               
+                <div className="title-container">
+                <label className="title-label"> Title </label>
                 <input
+                    className="title-input"
                     type="text"
                     value={title}
                     onChange = {(e) => setTitle (e.target.value)}
                 />
                 </div>
 
-                <div className = "Amount">
-                    <label >Amount </label>
-                    <input
+                    <div className="Amount-container">
+                    <label className="Amount-label" >Amount </label>
+                    <input className="Amount-input"
                     type="number"
                     value={amount}
                     onChange = {(e) => setAmount (e.target.value)}
                 />
+
+                    </div>
                 </div>
                 
                
 
-                <div className = "Date">
-                    <label >Date </label>
-                    <input
+                <div className = "date-container">
+                    <label className="date-label" >Date </label>
+                    <input className="date-input"
                     type="date"
                     value={date}
                     onChange = {(e) => setDate (e.target.value)}
