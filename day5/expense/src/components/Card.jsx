@@ -1,8 +1,9 @@
 import React from "react";
-import expense from "./data/expense"
+import expense from "../data/expense"
 
 function Card({ expenses }) {
-
+  
+  
   
   return (
     <div className="Card">

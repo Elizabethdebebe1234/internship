@@ -1,0 +1,274 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #3d3d3d;
+  color: white;
+  min-height: 100vh;
+  padding: 52px 20px 40px;
+}
+
+/* MAIN FORM */
+.header {
+  width: 100%;
+  max-width: 738px;
+  min-height: 246px;
+  margin: 0 auto 29px;
+  padding: 17px 15px 15px;
+  background-color: #aa91ed;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.header form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.title-amount {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 15px;
+  row-gap: 8px;
+}
+
+.title-amount label,
+.date label {
+  display: block;
+  color: #171717;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.title-amount input,
+.date input {
+  width: 100%;
+  height: 38px;
+  padding: 8px;
+  background-color: white;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+}
+
+.title-amount input:focus,
+.date input:focus {
+  border: 2px solid #4b0067;
+}
+
+.date {
+  width: calc((100% - 15px) / 2);
+  margin-top: 17px;
+}
+
+.date label {
+  margin-bottom: 8px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.buttons button {
+  height: 52px;
+  padding: 0 29px;
+  border: none;
+  border-radius: 12px;
+  background-color: #4b0067;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease,
+              transform 0.2s ease;
+}
+
+.buttons button:hover {
+  background-color: #65008a;
+  transform: translateY(-2px);
+}
+
+.buttons button:active {
+  transform: scale(0.97);
+}
+
+/* EXPENSE SECTION */
+.expenses-section {
+  max-width: 738px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 14px;
+  background-color: #1e1e1e;
+}
+
+/* FILTER */
+.filter-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px 14px;
+  margin-bottom: 0;
+}
+
+.filter-text {
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+}
+
+.filter-select {
+  width: 143px;
+  height: 40px;
+  padding: 0 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: white;
+  color: #171717;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+
+/* EXPENSE CARDS */
+.Card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.expense-card {
+  min-height: 96px;
+  padding: 7px 7px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: #4b4b4b;
+}
+
+/* DATE BADGE */
+.expense-date {
+  width: 82px;
+  min-width: 82px;
+  height: 82px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #292929;
+  border: 1px solid #bdbdbd;
+  border-radius: 13px;
+  color: white;
+}
+
+.expense-month {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.expense-year {
+  font-size: 11px;
+  margin-top: 3px;
+}
+
+.expense-day {
+  font-size: 23px;
+  font-weight: 700;
+  margin-top: 3px;
+}
+
+/* EXPENSE TITLE */
+.expense-card h3 {
+  flex: 1;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* AMOUNT BADGE */
+.expense-amount {
+  min-width: 107px;
+  padding: 9px 12px;
+  text-align: center;
+  background-color: #4b0067;
+  border: 1px solid #d1b9dc;
+  border-radius: 13px;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* EMPTY MESSAGE */
+.empty-message {
+  padding: 25px;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* SMALL SCREENS */
+@media (max-width: 600px) {
+  body {
+    padding: 25px 12px;
+  }
+
+  .header {
+    min-height: auto;
+    padding: 17px 12px;
+  }
+
+  .title-amount {
+    grid-template-columns: 1fr;
+  }
+
+  .date {
+    width: 100%;
+  }
+
+  .buttons {
+    margin-top: 20px;
+  }
+
+  .buttons button {
+    flex: 1;
+    padding: 0 10px;
+  }
+
+  .expenses-section {
+    padding: 12px 8px;
+  }
+
+  .filter-button {
+    padding: 10px 5px 14px;
+  }
+
+  .expense-card {
+    gap: 9px;
+  }
+
+  .expense-date {
+    width: 68px;
+    min-width: 68px;
+    height: 75px;
+  }
+
+  .expense-card h3 {
+    font-size: 15px;
+  }
+
+  .expense-amount {
+    min-width: 85px;
+    padding: 8px 6px;
+    font-size: 15px;
+  }
+}

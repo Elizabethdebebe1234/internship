@@ -3,9 +3,16 @@ import { useState } from "react";
 
 function Filter({selectedYear, onChangeYear}){
 
+   const filteredExpences = expence.filter((item) => {
+    const year = new Date(item.date).getFullYear();
+
+    return selectedYear === "All" || year === Number(selectedYear);
+  });
+
+
 
     return(
-      <div className = "same-box">
+      
        <div className="filter-button">
         <p className="filter-text">Filter</p>
          
@@ -21,7 +28,7 @@ function Filter({selectedYear, onChangeYear}){
          </select>
        </div>
 
-       </div>
+       
     );
 }
 

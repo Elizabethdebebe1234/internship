@@ -80,7 +80,7 @@ function Header ({onSubmitExpense}) {
 
                  <div className = "submit-button">
                 <div className = "Add-Expense">
-                    <button onClick={handleSubmit}> Add Expense </button>
+                    <button type="button" onClick={handleSubmit}> Add Expense </button>
                 </div>
                 <div className = "Cancel">
                     <button type= "button" onClick={handleCancel}>

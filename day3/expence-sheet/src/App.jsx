@@ -7,14 +7,11 @@ import expenceData from "./data/expence";
 function App() {
   const [selectedYear, setSelectedYear] = useState("All");
   const [expence, setExpence] = useState(() => {
+  
   const savedExpences = localStorage.getItem("expences");
-
     if (savedExpences) {
-      return JSON.parse(savedExpences).map((item) => ({
-        ...item,
-        date: (item.date),
-      }));
-    }
+  return JSON.parse(savedExpences);
+}
 
     return expenceData;
   });
@@ -22,7 +19,7 @@ function App() {
   
   useEffect(() => {
     localStorage.setItem("expences", JSON.stringify(expence));
-  }, [expence]);
+  }, [expence]); 
 
   function handleSubmit(newExpense) {
     setExpence((previousExpenses) => [
